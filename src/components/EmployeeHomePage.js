@@ -76,10 +76,13 @@ const PastEvent = () => {
 const ClipsSection = () => {
     return (
         <div style={{ flex: "1" }}>
-            <Link to="/clips" style={{ display: "flex", alignItems: "center", color: "black", textDecoration: "none" }}>
-                <img src={clip} alt="clip" style={{ height: "25px", marginRight: "10px" }} />
-                <h2>Your clips</h2>
-            </Link>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", color: "black", textDecoration: "none" }}>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                    <img src={clip} alt="clip" style={{ height: "25px", marginRight: "10px" }} />
+                    <h2>Your clips</h2>
+                </div>
+                <Link to="/clips" style={{ textTransform: "uppercase", color: "black", textDecoration: "none" }}>See all</Link>
+            </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <Clip />
             </div>
